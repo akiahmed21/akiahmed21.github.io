@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aki's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: monospace;
+    background-color: #ffe4e1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.idk {
+    background-color: #ffb6c1;
+    padding: 50px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px; 
+    margin: 20px auto; 
+}
+
+.button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+    background-color: #ffb6c1;
+    border-radius: 10px;
+}
+li {
+  display: inline;
+}
+li a:hover {
+  background-color: #ff9cee;
+    padding: 5px 10px;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> 
+        </nav>
+    </header>
+    
+    <section class="idk">
+        <h1>Welcome to My Portfolio</h1>
+        <a href="#portfoliodeets" class="button">Learn More</a>
+    </section>
+    
+    <section id="about" class="idk">
+        <h2>About Me</h2>
+        <p>I'm Aki, an Informatics student, a research assistant at UX & Immersive Technologies, and an intern
+        at the Makerspace. I like to draw, design, and play video games. </p>
+    </section>
+    
+    <section id="contact" class="idk">
+        <h2>Contact Us</h2>
+        <p><a href="mailto:aahmed4@albany.edu.com">Email me!</a></p>
+        <p><a href="https://www.linkedin.com/in/aki-ahmed">Linkedin!</a></p>
+    </section>
+</body>
+</html>

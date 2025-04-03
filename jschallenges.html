@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Challenges</title>
+    <style>
+        body { font-family: monospace; text-align: center; background-color: #ffdbfb }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #83cc9a; color:white; margin: 5px; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1 id="greeting">greeting</h1>
+    <script>
+        function greetUser() {
+            const now = new Date();
+            const hour = now.getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = "Good morning!";
+            } else if (hour < 17) {
+                greeting = "Good afternoon!";
+            } else {
+                greeting = "Good evening!";
+            }
+
+            document.getElementById("greeting").innerText = greeting;
+        }
+
+        // Call the function when the page loads
+        window.onload = greetUser;
+    </script>
+    
+    <h1>Quiz Game</h1>
+            <p>What is the process of water changing from liquid to gas?</p>
+            <input type="text" id="answer1" placeholder="answer">
+            <p>What is the 4th color of the rainbow?</p>
+            <input type="text" id="answer2" placeholder="answer">
+            <p>How many are in a dozen?</p>
+            <input type="text" id="answer3" placeholder="answer">
+        <button onclick="checkAnswers()">Submit Answers</button>
+        <h2 id="quiz-result"></h2>
+
+    <script>
+        function checkAnswers() {
+            const answers = [
+                { correctAnswer: "evaporation", userAnswer: document.getElementById("answer1").value.trim() },
+                { correctAnswer: "green", userAnswer: document.getElementById("answer2").value.trim() },
+                { correctAnswer: "12", userAnswer: document.getElementById("answer3").value.trim() }
+            ];
+
+            let score = 0;
+
+            answers.forEach(answer => {
+                if (answer.userAnswer.toLowerCase() === answer.correctAnswer.toLowerCase()) {
+                    score++;
+                }
+            });
+
+            document.getElementById("quiz-result").innerText = `You scored ${score} out of ${answers.length}`;
+        }
+    </script>
+    
+    <h1>To-Do List</h1>
+    	<input type="text" id="taskInput" placeholder="Enter a task">
+    	<button onclick="addTask()">Add Task</button>
+   		<button onclick="clearTasks()">Clear Tasks</button>
+    	<ul id="taskList"></ul>
+
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const taskInput = document.getElementById("taskInput");
+            const task = taskInput.value.trim();
+            if (task) {
+                tasks.push(task);
+                updateTaskList();
+                taskInput.value = "";
+            }
+        }
+
+        function clearTasks() {
+            tasks = [];
+            updateTaskList();
+        }
+
+        function updateTaskList() {
+            const taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            tasks.forEach(task => {
+                const li = document.createElement("li");
+                li.textContent = task;
+                taskList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

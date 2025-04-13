@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aki Ahmed's personal portfolio website. Learn about her work, interests, and how to get in touch.">
+  <meta name="author" content="Aki Ahmed">
+  <title>Aki's Portfolio</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: monospace;
+      background-color: #ffe4e1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      background-color: #ffb6c1;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #ff9cee;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .idk {
+      background-color: #ffb6c1;
+      padding: 50px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff4da6;
+    }
+
+    a {
+      color: #333;
+    }
+
+    a:hover {
+      color: #000;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      nav li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .idk {
+        width: 95%;
+        padding: 30px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="idk" id="portfoliodeets">
+    <h1>Welcome to My Portfolio</h1>
+    <a href="#about" class="button" aria-label="Learn more about me">Learn More</a>
+  </section>
+
+  <section id="about" class="idk">
+    <h2>About Me</h2>
+    <p>I'm Aki, an Informatics student, a research assistant at UX & Immersive Technologies, and an intern at the Makerspace. I like to draw, design, and play video games.</p>
+  </section>
+
+  <section id="features" class="idk">
+    <h2>Features</h2>
+    <p>This portfolio highlights my creative skills, design experience, and immersive tech research. Stay tuned for project updates!</p>
+  </section>
+
+  <section id="contact" class="idk">
+    <h2>Contact Me</h2>
+    <p><a href="mailto:aahmed4@albany.edu">Email me</a></p>
+    <p><a href="https://www.linkedin.com/in/aki-ahmed" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+  </section>
+</body>
+</html>
